@@ -56,7 +56,7 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 100% !important; /* Full width */
             width: 100%;
             background: var(--bg-primary);
             border-radius: 16px;
@@ -186,14 +186,14 @@
 
         /* Main Content */
         .main-content {
-            padding: 20px 40px 40px;
+            padding: 20px 16px !important; /* Beri padding kiri-kanan 16px */
         }
 
         /* Summary Cards */
         .summary-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
+            gap: 16px;
             margin-bottom: 40px;
         }
 
@@ -542,8 +542,9 @@
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 100%) {
             .container {
+                max-width: 100% !important; /* Full width */
                 margin: 10px;
                 border-radius: 12px;
             }
@@ -557,7 +558,27 @@
             }
             
             .payment-section {
-                padding: 24px 20px;
+                padding: 24px 16px;
+            }
+            
+            .payment-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .payment-card {
+                padding: 16px;
+            }
+            
+            .payment-header h3 {
+                font-size: 18px;
+            }
+            
+            .payment-header p {
+                font-size: 13px;
+            }
+            
+            .payment-row {
+                font-size: 12px;
             }
             
             .summary-grid, .payment-grid {
